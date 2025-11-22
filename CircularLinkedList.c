@@ -1,3 +1,31 @@
+//CRICULAR QUEUE//
+
+//*Aim :- To perform circular queue operations using array*//
+
+🧭 Algorithm:
+BEGIN
+
+Initialize front = -1, rear = -1, and read queue size n.
+
+Repeat until user enters “no”:
+ a. Display menu with choices: Enqueue or Dequeue.
+ b. If Enqueue selected:
+  i. If (rear + 1) % max_size == front, print Queue Overflow.
+  ii. Else if front == -1, set front = 0, rear = 0.
+  iii. Else, set rear = (rear + 1) % max_size.
+  iv. Insert new element at queue[rear].
+ c. If Dequeue selected:
+  i. If front == -1, print Queue Underflow.
+  ii. Else, set item = queue[front].
+  iii. If front == rear, set both front and rear to -1.
+  iv. Else, set front = (front + 1) % max_size.
+  v. Display deleted item.
+ d. Ask user if they want to continue.
+
+End when user types “no”.
+END
+
+🧭 Code:
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -124,4 +152,5 @@ int main()
     }
 
     return 0;
+
 }
