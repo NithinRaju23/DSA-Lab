@@ -1,8 +1,75 @@
+//LINKED LIST//
 
+//Aim:*To write a C program to implement a singly linked list with operations to insert, delete, and display elements.*//
 
+🧭 Algorithm:
+
+Step 1: Start.
+
+Step 2: Define a structure Node with:
+
+data (integer)
+
+next (pointer to next node).
+
+Step 3: Create a function CreateNode(data) to:
+
+Allocate memory for a new node.
+
+Store data and set next = NULL.
+
+Return the new node.
+
+Step 4: To Insert at Beginning:
+
+Create a new node.
+
+Set newNode->next = head.
+
+Update head = newNode.
+
+Step 5: To Insert at End:
+
+Create a new node.
+
+If list is empty, set head = newNode.
+
+Else, traverse to last node and set last->next = newNode.
+
+Step 6: To Insert at a Position:
+
+If position = 1, insert at beginning.
+
+Else, traverse to (position - 1) node.
+
+Link new node between nodes properly.
+
+Step 7: To Delete a Node by Value:
+
+If list is empty, print “List empty”.
+
+If head has the value, delete head.
+
+Else, search for the node with the value and unlink it.
+
+Step 8: To Display the List:
+
+Traverse from head to end.
+
+Print each node’s data.
+
+Step 9: In main():
+
+Display menu with choices (Insert, Delete, Display, Exit).
+
+Read user’s choice and perform the corresponding operation.
+
+Repeat until Exit is chosen.
+
+Step 10: Stop.
+🧭Code:
 #include <stdio.h>
 #include <stdlib.h>
-
 // Create node for linked list
 struct Node
 {
@@ -210,3 +277,4 @@ int main()
     }
     return 0;
 }
+
